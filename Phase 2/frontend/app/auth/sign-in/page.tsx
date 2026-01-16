@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { Button } from '@/components/ui/Button';
 import { Input } from '@/components/ui/Input';
-import { cn } from '@/lib/utils';
+import { cn, validateEmail } from '@/lib/utils';
 import { ArrowRight, CheckCircle2, Lock, Mail, Sparkles } from 'lucide-react';
 
 export default function SignInPage() {
