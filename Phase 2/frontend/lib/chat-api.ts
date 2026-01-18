@@ -1,5 +1,5 @@
-import { ChatRequest, ChatResponse } from './types';
-import { mockSendChatMessage, mockGetConversationHistory, mockGetConversations } from './mockChatApi';
+import { ChatRequest, ChatResponse } from '@/lib/types';
+import { mockSendChatMessage, mockGetConversationHistory, mockGetConversations } from '@/lib/mockChatApi';
 
 // Point to backend server
 const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'http://127.0.0.1:8001/api';

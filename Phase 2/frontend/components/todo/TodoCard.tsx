@@ -35,7 +35,7 @@ const TodoCard = ({ todo, onToggle, onDelete, onEdit, index = 0 }: TodoCardProps
   return (
     <div
       className={cn(
-        'group relative bg-white rounded-2xl p-5 border transition-all duration-500 hover:-translate-y-1 shadow-md hover:shadow-lg overflow-hidden',
+        'group relative glass-premium rounded-2xl p-5 border transition-all duration-500 hover:-translate-y-1 overflow-hidden',
         todo.completed
           ? 'border-green-200 bg-green-50'
           : 'border-purple-100 bg-gradient-to-br from-purple-50 to-indigo-50',

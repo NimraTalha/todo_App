@@ -92,15 +92,15 @@ const ThemeToggle = ({ position = 'header', showLabel = false, className }: Them
     // Base styles
     'inline-flex items-center justify-center',
     // T034: Classes for light theme
-    'bg-white border border-slate-200 rounded-xl p-2',
+    'bg-white border border-purple-200 rounded-xl p-2',
     // T034: Classes for dark theme
-    'dark:bg-slate-800 dark:border-slate-700',
+    'dark:bg-purple-900/30 dark:border-purple-700',
     // Hover state
-    'hover:shadow-md hover:border-slate-300 dark:hover:border-slate-600',
+    'hover:shadow-md hover:border-purple-300 dark:hover:border-purple-600',
     // T035: Hover micro-lift animation (200-300ms ease-out-cubic)
     'hover:-translate-y-0.5 transition-all duration-300 ease-out-cubic',
     // Focus state
-    'focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:ring-offset-2',
+    'focus:outline-none focus:ring-2 focus:ring-purple-500/20 focus:ring-offset-2',
     // Active state
     'active:translate-y-0 active:shadow-sm',
     // Position-specific adjustments
@@ -121,7 +121,7 @@ const ThemeToggle = ({ position = 'header', showLabel = false, className }: Them
 
       {/* Optional label */}
       {showLabel && (
-        <span className="ml-2 text-sm font-medium text-slate-700 dark:text-slate-300">
+        <span className="ml-2 text-sm font-medium text-purple-700 dark:text-purple-300">
           {theme === 'light' ? 'Dark' : 'Light'}
         </span>
       )}

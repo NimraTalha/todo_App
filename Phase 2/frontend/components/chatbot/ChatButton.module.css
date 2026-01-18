@@ -5,7 +5,7 @@
   width: 56px;
   height: 56px;
   border-radius: 50%;
-  background-color: #10b981; /* emerald-500 */
+  background: linear-gradient(135deg, #a78bfa, #8b5cf6); /* light purple to purple */
   border: none;
   cursor: pointer;
   display: flex;
@@ -13,13 +13,34 @@
   justify-content: center;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
   z-index: 9999;
-  transition: all 0.2s ease;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: visible;
+}
+
+.chatButton::before {
+  content: '';
+  position: absolute;
+  top: -4px;
+  bottom: -4px;
+  left: -4px;
+  right: -4px;
+  background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 70%);
+  border-radius: 9999px; /* Make it round */
+  pointer-events: none;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.chatButton:hover::before {
+  opacity: 1;
 }
 
 .chatButton:hover {
-  background-color: #059669; /* emerald-600 */
-  transform: scale(1.05);
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  background: linear-gradient(135deg, #c4b5fd, #a78bfa); /* lighter purple gradient on hover */
+  transform: scale(1.05) translateY(-2px);
+  box-shadow: 0 10px 20px -3px rgba(139, 92, 246, 0.3), 0 4px 8px -2px rgba(0, 0, 0, 0.1);
 }
 
 .chatButton:active {
@@ -37,12 +58,12 @@
 
 @keyframes pulse {
   0% {
-    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
+    box-shadow: 0 0 0 0 rgba(167, 139, 250, 0.7);
   }
   70% {
-    box-shadow: 0 0 0 12px rgba(16, 185, 129, 0);
+    box-shadow: 0 0 0 12px rgba(167, 139, 250, 0);
   }
   100% {
-    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0);
+    box-shadow: 0 0 0 0 rgba(167, 139, 250, 0);
   }
 }

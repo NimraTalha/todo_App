@@ -1,7 +1,7 @@
 // Mock chat API implementation for local development
 // This simulates chat responses when the backend is not available
 
-import { ChatRequest, ChatResponse } from './types';
+import { ChatRequest, ChatResponse } from '@/lib/types';
 
 // Initialize mock data in localStorage if not present
 const initializeMockData = () => {
