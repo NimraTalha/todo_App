@@ -7,14 +7,15 @@
 }
 
 .chatPanel {
-  width: 400px;
-  height: 600px;
-  background: rgba(255, 255, 255, 0.1);
+  width: min(90vw, 400px);
+  height: min(70vh, 600px);
+  max-height: 600px;
+  background: linear-gradient(135deg, rgba(247, 247, 220, 0.9), rgba(230, 230, 200, 0.7)); /* olive green gradient */
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border-radius: 16px;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  border: 1px solid rgba(168, 152, 96, 0.3); /* olive green border */
+  box-shadow: 0 8px 32px 0 rgba(168, 152, 96, 0.25); /* olive green shadow */
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -23,14 +24,14 @@
 
 /* Dark theme support */
 [data-theme='dark'] .chatPanel {
-  background: rgba(30, 30, 30, 0.3);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: linear-gradient(135deg, rgba(100, 90, 40, 0.3), rgba(70, 60, 20, 0.3)); /* darker olive green gradient */
+  border: 1px solid rgba(168, 152, 96, 0.2);
 }
 
 .header {
   padding: 16px;
-  background: rgba(255, 255, 255, 0.15);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(168, 152, 96, 0.15); /* olive green background */
+  border-bottom: 1px solid rgba(168, 152, 96, 0.2);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -38,13 +39,13 @@
 
 .header h3 {
   margin: 0;
-  color: #1f2937;
+  color: #554236; /* dark olive green text */
   font-size: 16px;
   font-weight: 600;
 }
 
 [data-theme='dark'] .header h3 {
-  color: #f9fafb;
+  color: #e0cfa9; /* light olive green text for dark mode */
 }
 
 .closeButton {
@@ -53,15 +54,17 @@
   cursor: pointer;
   padding: 4px;
   border-radius: 4px;
-  color: #1f2937;
+  color: #554236; /* dark olive green */
+  transition: all 0.2s ease;
 }
 
 .closeButton:hover {
-  background: rgba(0, 0, 0, 0.1);
+  background: rgba(168, 152, 96, 0.2); /* olive green hover */
+  transform: scale(1.1);
 }
 
 [data-theme='dark'] .closeButton {
-  color: #f9fafb;
+  color: #e0cfa9; /* light olive green for dark mode */
 }
 
 .messagesContainer {

@@ -119,48 +119,48 @@
 
 @layer base {
   :root {
-    --background: 210 40% 98%;
+    --background: 60 20% 95%; /* Olive green background */
     --foreground: 222.2 84% 4.9%;
     --card: 0 0% 100%;
     --card-foreground: 222.2 84% 4.9%;
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
-    --primary: 226 70% 55.5%;
+    --primary: 120 30% 40%; /* Olive green */
     --primary-foreground: 210 40% 98%;
-    --secondary: 210 40% 96.1%;
+    --secondary: 60 15% 85%; /* Light olive green */
     --secondary-foreground: 222.2 47.4% 11.2%;
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-    --accent: 210 40% 96.1%;
+    --muted: 60 15% 90%;
+    --muted-foreground: 60 10% 40%;
+    --accent: 60 15% 90%;
     --accent-foreground: 222.2 47.4% 11.2%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 226 70% 55.5%;
+    --border: 60 10% 85%;
+    --input: 60 10% 85%;
+    --ring: 120 30% 40%; /* Olive green ring */
     --radius: 1rem;
   }
 
   .dark {
-    --background: 222 47% 7%;
+    --background: 60 10% 10%; /* Dark olive green background */
     --foreground: 210 40% 98%;
-    --card: 222 47% 7%;
+    --card: 60 10% 10%;
     --card-foreground: 210 40% 98%;
-    --popover: 222 47% 7%;
+    --popover: 60 10% 10%;
     --popover-foreground: 210 40% 98%;
-    --primary: 226 80% 65%;
+    --primary: 120 40% 30%; /* Darker olive green */
     --primary-foreground: 222.2 47.4% 11.2%;
-    --secondary: 217.2 32.6% 22%;
+    --secondary: 60 15% 20%;
     --secondary-foreground: 210 40% 98%;
-    --muted: 217.2 32.6% 22%;
-    --muted-foreground: 215 20.2% 70%;
-    --accent: 217.2 32.6% 25%;
+    --muted: 60 15% 20%;
+    --muted-foreground: 60 10% 60%;
+    --accent: 60 15% 25%;
     --accent-foreground: 210 40% 98%;
     --destructive: 0 62.8% 45%;
     --destructive-foreground: 210 40% 98%;
-    --border: 217.2 32.6% 25%;
-    --input: 217.2 32.6% 25%;
-    --ring: 226 80% 65%;
+    --border: 60 10% 25%;
+    --input: 60 10% 25%;
+    --ring: 120 40% 30%;
   }
 }
 
@@ -254,6 +254,54 @@
   .neon:hover {
     box-shadow: 0 8px 40px rgba(99,102,241,0.28), 0 0 30px rgba(99,102,241,0.12) inset;
     transform: translateY(-4px) scale(1.01);
+  }
+
+  /* White bright effect on button sides */
+  .btn-white-bright-effect {
+    position: relative;
+    overflow: visible;
+  }
+
+  .btn-white-bright-effect::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -4px;
+    right: -4px;
+    background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0) 70%);
+    border-radius: inherit;
+    pointer-events: none;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .btn-white-bright-effect:hover::before {
+    opacity: 1;
+  }
+
+  /* White bright effect */
+  .white-bright-effect {
+    transition: opacity 0.3s ease;
+  }
+
+  .white-bright-effect:hover {
+    opacity: 1;
+  }
+
+  /* Dark olive green theme */
+  .dark-olive-green-theme {
+    background: linear-gradient(135deg, #3a5f0b, #2c4d09) !important; /* dark olive green */
+    transition: all 0.3s ease;
+  }
+
+  .dark-olive-green-theme:hover {
+    background: linear-gradient(135deg, #4a6f1b, #3c5d19) !important; /* slightly lighter olive on hover */
+  }
+
+  .dark-olive-green-theme:active {
+    background: linear-gradient(135deg, #2a4f01, #1c3d01) !important; /* darker olive when active */
   }
 }
 

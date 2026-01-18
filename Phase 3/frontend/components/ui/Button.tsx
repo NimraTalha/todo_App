@@ -56,18 +56,18 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
      * T016: Button variants (primary, secondary, ghost, danger)
      */
     const variantClasses: Record<ButtonVariant, string> = {
-      // Primary variant - indigo with hover lift
+      // Primary variant - dark olive green mix with hover lift
       primary:
-        'bg-primary text-white shadow-md hover:shadow-lg hover:bg-primary-hover active:bg-indigo-800 disabled:bg-slate-300 disabled:text-slate-500',
-      // Secondary variant - white surface with border
+        'bg-gradient-to-r from-green-700 to-green-900 text-white shadow-md hover:shadow-lg hover:from-green-600 hover:to-green-800 active:from-green-800 active:to-green-950 disabled:bg-slate-300 disabled:text-slate-500',
+      // Secondary variant - white surface with border and hover effect
       secondary:
-        'bg-white border border-slate-200 text-slate-900 hover:bg-slate-50 hover:border-slate-300 dark:bg-slate-800 dark:border-slate-700 dark:text-slate-50 dark:hover:bg-slate-700',
+        'bg-white border border-slate-200 text-slate-900 hover:bg-gradient-to-r hover:from-green-50 hover:to-green-100 hover:border-green-200 dark:bg-slate-800 dark:border-slate-700 dark:text-slate-50 dark:hover:from-green-900/30 dark:hover:to-green-800/30',
       // Ghost variant - transparent with hover background
       ghost:
-        'bg-transparent text-slate-700 hover:bg-slate-100 dark:text-slate-300 dark:hover:bg-slate-800',
-      // Danger variant - rose for destructive actions
+        'bg-transparent text-slate-700 hover:bg-gradient-to-r hover:from-green-100 hover:to-green-200 dark:text-slate-300 dark:hover:from-green-800/50 dark:hover:to-green-700/50',
+      // Danger variant - rose for destructive actions with green hover
       danger:
-        'bg-rose-500 text-white shadow-md hover:bg-rose-600 hover:shadow-lg active:bg-rose-700',
+        'bg-rose-500 text-white shadow-md hover:bg-rose-600 hover:shadow-lg hover:from-green-500 hover:to-green-700 active:bg-rose-700',
     };
 
     /**
@@ -118,8 +118,10 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
       'focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:ring-offset-2',
       // T019: Hover micro-lift animation
       'hover:-translate-y-0.5 transition-all duration-300 ease-out-cubic',
-      // Neon accent for primary buttons
-      variant === 'primary' ? 'neon' : '',
+      // Olive green theme for primary buttons
+      variant === 'primary' ? 'olive-green-theme' : '',
+      // White bright effect on button sides
+      'btn-white-bright-effect',
       // Disabled state
       'disabled:cursor-not-allowed disabled:opacity-70 disabled:hover:translate-y-0',
       // Full width option

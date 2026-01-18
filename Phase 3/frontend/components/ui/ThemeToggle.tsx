@@ -96,11 +96,11 @@ const ThemeToggle = ({ position = 'header', showLabel = false, className }: Them
     // T034: Classes for dark theme
     'dark:bg-slate-800 dark:border-slate-700',
     // Hover state
-    'hover:shadow-md hover:border-slate-300 dark:hover:border-slate-600',
+    'hover:shadow-md hover:border-green-300 dark:hover:border-green-600',
     // T035: Hover micro-lift animation (200-300ms ease-out-cubic)
     'hover:-translate-y-0.5 transition-all duration-300 ease-out-cubic',
     // Focus state
-    'focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:ring-offset-2',
+    'focus:outline-none focus:ring-2 focus:ring-green-500/20 focus:ring-offset-2',
     // Active state
     'active:translate-y-0 active:shadow-sm',
     // Position-specific adjustments

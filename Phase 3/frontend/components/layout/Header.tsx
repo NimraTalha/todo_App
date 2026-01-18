@@ -68,7 +68,7 @@ export default function Header() {
 
             {!pathname?.includes('/dashboard') && (
               <Link href="/dashboard" className="hidden sm:block">
-                <button className="px-5 py-2.5 bg-foreground text-background text-sm font-black rounded-xl hover:opacity-90 transition-all active:scale-95 shadow-lg shadow-foreground/10">
+                <button className="px-5 py-2.5 bg-gradient-to-r from-green-700 to-green-900 text-white text-sm font-bold rounded-xl hover:opacity-90 transition-all active:scale-95 shadow-lg shadow-primary/20">
                   Go to Workspace
                 </button>
               </Link>

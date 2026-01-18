@@ -9,7 +9,7 @@
 }
 
 .user .content {
-  background-color: #3b82f6; /* blue-500 */
+  background: linear-gradient(135deg, #787850, #505030); /* olive green gradient */
   color: white;
   border-radius: 18px 4px 18px 18px;
 }
@@ -20,8 +20,8 @@
 }
 
 .assistant .content {
-  background-color: #e5e7eb; /* gray-200 */
-  color: #1f2937; /* gray-800 */
+  background: linear-gradient(135deg, #f7f7dc, #e6e6c8); /* olive green gradient */
+  color: #554236; /* dark olive text */
   border-radius: 4px 18px 18px 18px;
 }
 
@@ -31,8 +31,8 @@
 }
 
 .system .content {
-  background-color: #9ca3af; /* gray-400 */
-  color: white;
+  background: linear-gradient(135deg, #d2d589, #b9bd60); /* olive yellow gradient */
+  color: #554236; /* dark olive text */
   border-radius: 18px;
   font-size: 0.8rem;
   padding: 4px 8px;
@@ -56,13 +56,19 @@
 }
 
 /* Dark theme support */
+[data-theme='dark'] .user .content {
+  background: linear-gradient(135deg, #a0a050, #787830); /* dark olive gradient */
+  color: #f0f0e0; /* light olive text */
+}
+
 [data-theme='dark'] .assistant .content {
-  background-color: #374151; /* gray-700 */
-  color: #f9fafb; /* gray-50 */
+  background: linear-gradient(135deg, #787850, #505030); /* dark olive gradient */
+  color: #e0cfa9; /* light olive text */
 }
 
 [data-theme='dark'] .system .content {
-  background-color: #4b5563; /* gray-600 */
+  background: linear-gradient(135deg, #a0a050, #787830); /* dark olive gradient */
+  color: #e0cfa9; /* light olive text */
 }
 
 /* Mobile responsiveness */

@@ -25,26 +25,27 @@ export default function HeroFull() {
           New — Landing Experience
         </div>
 
-        <h1 className="text-6xl md:text-8xl font-black tracking-tighter leading-[0.9] text-foreground mb-6">
-          A Todo Experience
+        <h1 className="text-6xl md:text-8xl font-black tracking-tighter leading-[0.9] bg-clip-text text-transparent bg-gradient-to-r from-green-700 via-green-800 to-green-900 mb-6 relative">
+          <span className="relative z-10">A Todo Experience</span>
           <br />
-          Like You've Never Seen.
+          <span className="relative z-10">Like You've Never Seen.</span>
+          <span className="absolute top-0 left-0 w-full h-full bg-white opacity-0 pointer-events-none rounded-lg blur-sm brightness-200 white-bright-effect"></span>
         </h1>
 
-        <p className="text-xl md:text-2xl opacity-80 body max-w-3xl mx-auto mb-10">
+        <p className="text-xl md:text-2xl text-purple-400 body max-w-3xl mx-auto mb-10">
           A fresh take on productivity: glass surfaces, kinetic micro-interactions,
           and delightful motion—crafted to make planning feel aspirational.
         </p>
 
         <div className="flex items-center justify-center gap-4">
           <Link href="/auth/sign-up">
-            <Button variant="primary" size="lg" className="h-16 px-10 rounded-2xl neon">
+            <Button variant="primary" size="lg" className="h-16 px-10 rounded-2xl bg-gradient-to-r from-green-700 to-green-900 hover:from-green-600 hover:to-green-800">
               Get Started
             </Button>
           </Link>
 
           <Link href="/dashboard">
-            <Button variant="ghost" size="lg" className="h-16 px-8 rounded-2xl">
+            <Button variant="ghost" size="lg" className="h-16 px-8 rounded-2xl hover:bg-purple-500/10 hover:text-purple-500 transition-colors">
               Explore Dashboard <ArrowRight className="ml-2 w-5 h-5" />
             </Button>
           </Link>

@@ -57,7 +57,7 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
               'group-focus-within:-translate-y-0.5 group-focus-within:scale-95',
               hasError
                 ? 'text-rose-600 dark:text-rose-400'
-                : 'text-slate-700 dark:text-slate-300 group-focus-within:text-primary'
+                : 'text-slate-700 dark:text-slate-300 group-focus-within:text-green-600 dark:group-focus-within:text-green-400'
             )}
           >
             {label}
@@ -89,7 +89,7 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
               'focus:outline-none focus:ring-2',
               hasError
                 ? 'border-rose-500 focus:border-rose-500 focus:ring-rose-500/20'
-                : 'border-slate-200 focus:border-indigo-500 focus:ring-indigo-500/20 dark:border-slate-700 dark:focus:border-indigo-400 dark:focus:ring-indigo-400/20',
+                : 'border-slate-200 focus:border-green-500 focus:ring-green-500/20 dark:border-slate-700 dark:focus:border-green-400 dark:focus:ring-green-400/20',
               // T022: Inner shadow for depth - inset shadow for visual recession
               'shadow-[inset_0_2px_4px_0_rgb(0_0_0_/_0.05)] focus:shadow-none',
               'dark:shadow-[inset_0_2px_4px_0_rgb(0_0_0_/_0.3)]',
