@@ -299,6 +299,45 @@
     opacity: 1;
   }
 
+  /* Olive green theme */
+  .olive-green-theme {
+    background: linear-gradient(135deg, #6b8e23, #556b2f) !important; /* olive drab to dark olive */
+    transition: all 0.3s ease;
+  }
+
+  .olive-green-theme:hover {
+    background: linear-gradient(135deg, #7c9e33, #657b3f) !important; /* lighter olive on hover */
+  }
+
+  .olive-green-theme:active {
+    background: linear-gradient(135deg, #5a7e13, #455b1f) !important; /* darker olive when active */
+  }
+
+  /* White bright effect on button sides */
+  .btn-white-bright-effect {
+    position: relative;
+    overflow: visible;
+  }
+
+  .btn-white-bright-effect::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    bottom: -2px;
+    left: -4px;
+    right: -4px;
+    background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0) 70%);
+    border-radius: inherit;
+    pointer-events: none;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .btn-white-bright-effect:hover::before {
+    opacity: 1;
+  }
+
   /* Dark olive green theme */
   .dark-olive-green-theme {
     background: linear-gradient(135deg, #3a5f0b, #2c4d09) !important; /* dark olive green */

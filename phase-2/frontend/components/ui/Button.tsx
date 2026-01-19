@@ -120,6 +120,10 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
       'hover:-translate-y-0.5 transition-all duration-300 ease-out-cubic',
       // White bright round effect
       'white-bright-round',
+      // Olive green theme for primary buttons
+      variant === 'primary' ? 'olive-green-theme' : '',
+      // White bright effect on button sides
+      'btn-white-bright-effect',
       // Disabled state
       'disabled:cursor-not-allowed disabled:opacity-70 disabled:hover:translate-y-0',
       // Full width option
